@@ -6,10 +6,10 @@ SCRIPT_FILE="password-generator.applescript"
 ICON_FILE="password-generator.icns"
 APP_NAME="Password Generator"
 
-command mkdir -p $OUT_DIR
+mkdir -p $OUT_DIR
 rm -rf $OUT_DIR/*
 
-command osacompile -o "$OUT_DIR/$APP_NAME.app" "$SRC_DIR/$SCRIPT_FILE"
+osacompile -o "$OUT_DIR/$APP_NAME.app" "$SRC_DIR/$SCRIPT_FILE"
 
 rm "$OUT_DIR/$APP_NAME.app/Contents/Resources/applet.icns"
 cp "$SRC_DIR/$ICON_FILE" "$OUT_DIR/$APP_NAME.app/Contents/Resources/applet.icns"
