@@ -1,6 +1,6 @@
 # Password Generator
 
-Generate iCloud Keychain **like** passwords endlessly.
+A super convenient AppleScript app to generate iCloud **like** passwords.
 
 ## Usage
 
