@@ -1,5 +1,5 @@
--- Constants
 global chars, answer
+-- Constants
 set chars to "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789"
 
 -- Main
@@ -10,14 +10,13 @@ on displayAlert()
 	set generatedPassword to generatePassword()
 	set question to display alert "New password copied to clipboard" message generatedPassword buttons {"Another Password", "Thanks"} default button 2
 	set answer to button returned of question
-	
+
 	if answer is equal to "Another Password" then
 		displayAlert()
 	end if
 end displayAlert
 
 -- Password Generator
-
 on generatePassword()
 	set result to ""
 	repeat 4 times
