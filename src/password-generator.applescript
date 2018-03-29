@@ -1,4 +1,5 @@
-global upperChars, lowerChars, nums, answer
+global upperChars, lowerChars, nums
+
 -- Constants
 set upperChars to "ABCDEFGHJKLMNPQRSTUVWXYZ"
 set lowerChars to "abcdefghijkmnopqrstuvwxyz"
@@ -41,13 +42,13 @@ on generatePassword()
 		set pluckedChar to item randIndex of charList
 		set shuffledCharList to shuffledCharList & pluckedChar
 		-- New charList excluding item at random index
-		set newCharList to {}
+		set reducedCharList to {}
 		repeat with index from 1 to (count charList)
 			if index is not equal to randIndex then
-				set newCharList to newCharList & item index of charList
+				set reducedCharList to reducedCharList & item index of charList
 			end if
 		end repeat
-		set charList to newCharList
+		set charList to reducedCharList
 	end repeat
 	-- Return dashed password string
 	set str to shuffledCharList as text
