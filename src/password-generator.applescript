@@ -10,6 +10,7 @@ displayAlert()
 -- Display Alert
 on displayAlert()
 	set generatedPassword to generatePassword()
+	set the clipboard to generatedPassword
 	set question to display alert "New password copied to clipboard" message generatedPassword buttons {"Another Password", "Thanks"} default button 2
 	set answer to button returned of question
 	
