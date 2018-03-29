@@ -1,6 +1,7 @@
 # Password Generator
 
-A super convenient AppleScript app to generate iCloud **like** passwords.
+A super convenient AppleScript app to generate passwords similar to iCloud
+Keychain suggested passwords.
 
 ## Usage
 
