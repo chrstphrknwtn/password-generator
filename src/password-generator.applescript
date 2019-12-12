@@ -25,17 +25,17 @@ on generatePassword()
 	set charList to {}
 	set shuffledCharList to {}
 	-- Ensure all char types
-	repeat with index from 1 to 12
-		if index is less than 7 then
+	repeat with index from 1 to 18
+		if index is less than 12 then
 			set charList to charList & some item of lowerChars
-		else if index is less than 10 then
+		else if index is less than 16 then
 			set charList to charList & some item of upperChars
 		else
 			set charList to charList & some item of nums
 		end if
 	end repeat
 	-- Shuffle into new list
-	repeat 12 times
+	repeat 18 times
 		-- Get a random index
 		set randIndex to random number from 1 to (count charList)
 		-- Pluck out item at random index
@@ -52,5 +52,5 @@ on generatePassword()
 	end repeat
 	-- Return dashed password string
 	set str to shuffledCharList as text
-	return text 1 thru 3 of str & "-" & text 4 thru 6 of str & "-" & text 7 thru 9 of str & "-" & text 10 thru 12 of str
+	return text 1 thru 6 of str & "-" & text 7 thru 12 of str & "-" & text 13 thru 18 of str
 end generatePassword
