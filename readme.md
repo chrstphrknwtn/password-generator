@@ -21,5 +21,5 @@ Keychain suggested passwords.
 ````
 git clone https://github.com/chrstphrknwtn/password-generator.git
 cd password-generator
-install.sh
+sh install.sh
 ````
